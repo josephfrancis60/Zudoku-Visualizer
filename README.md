@@ -1,6 +1,8 @@
 # Zudoku-Visualizer
 Python-based Sudoku Solver that uses **Recursive Backtracking** to solve any valid sudoku puzzle with real-time visualization.
 
+**Deployed the web application on Render. Feel free to try [Zudoku Visualizer](https://zudoku-visualizer.onrender.com) out.**
+
 ## Description
 This project includes an interactive Sudoku solver that accepts user input, validates the board, and dynamically visualizes the solving process. The solver is implemented using **Flask** for the backend and **vanilla JavaScript**, **HTML**, and **CSS** for the frontend. REST APIs are utilized for seamless communication between the client and server.
 

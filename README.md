@@ -50,7 +50,7 @@ The frontend sends the inputted board data to the *"/solve"* endpoint using a *P
 4. **Visualization**: The frontend dynamically updates the grid, showing each step in the solving  process, including backtracking, untill the puzzle is solved.
 
 ## Backtracking in Action
-<img src="https://github.com/user-attachments/assets/880fe445-81a3-4755-a1f7-e25756182f66" width="400" height="auto" />
+<img src="https://github.com/user-attachments/assets/8468c90e-e129-4d8b-a8d1-ac6508104dd9" width="400" height="auto" />
 
 ## Setup
 1. Clone the Repository:

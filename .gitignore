@@ -1,0 +1,39 @@
+# Python bytecode files
+*.pyc
+*.pyo
+*.pyd
+_pycache_/
+
+# Virtual environment
+VENV/
+venv/
+ENV/
+env/
+venv_zudoku
+
+# IDE/Editor specific files
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+node_modules/
+
+# OS-specific files
+.DS_Store           # macOS
+Thumbs.db           # Windows
+
+# Flask-specific
+instance/
+*.log
+
+# Pytest cache
+.pytest_cache/
+
+# Environment variables
+.env
+.env.*
+
+# Docker-related
+Dockerfile
+docker-compose.yml

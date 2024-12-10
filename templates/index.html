@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zudoku Visualizer</title>
+    <!-- Link to the CSS file in the static folder -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    
+    <h1>Zudoku Visualizer</h1>
+    <h2>'Visualize Recursive Backtracking Algorithm'<br>through dynamic, real-time steps</h2>
+    
+    
+    <div id="sudoku-container"></div>
+    <button id="solve-button" onclick="solveSudoku()">Solve</button>
+    <button id="clear-button" onclick="resetGrid()">Clear</button>
+    
+    <h3>you can enter numbers between 1-9<br>0 is treated as empty cell<br>Note:Please do not enter the same number in any row, column or 3x3 subgrid</h3>    
+
+    <!-- Link to the JS file in the static folder -->
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

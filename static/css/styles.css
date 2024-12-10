@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Jaro:opsz@6..72&family=Orbitron:wght@400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+   
+    text-align: center;
+    color: rgb(255, 255, 255);  /* sudoku color */
+    background-color: rgb(33, 37, 40);
+    margin-top: 15px;
+}
+
+
+h1 {
+    
+    font-family: 'Archivo Black', orbitron, jaro, sans-serif;
+    text-transform: uppercase;
+    color: #4ddeff;
+    font-size: 50px;
+}
+
+h2 {
+    color: whitesmoke;
+    font-family: poppins, 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif, arial;
+    font-size: 17px;
+}
+
+h3 {
+    margin-top: 10px;
+    font-family: monospace, sans-serif;
+    font-size: 15px;
+}
+
+table {
+    margin: 40px auto;
+    border-collapse: collapse;
+    align-items: center;
+    
+}
+
+td {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+}
+
+/* thicker border for 3,6 rows(bottom) */ 
+tr:nth-child(3) td,
+tr:nth-child(6) td {
+    border-bottom: 5px solid rgb(33, 37, 40);
+}
+
+/* thicker border for 3,6 column(right) */ 
+td:nth-child(3),
+td:nth-child(6) {
+    border-right: 5px solid rgb(33, 37, 40);
+}
+
+.sudoku-cell{
+    background-color: rgb(54, 71, 83); /*default white background for all cells */
+    transition: background-color 0.2s ease;
+    border: 2px solid rgb(33, 37, 40);
+    border-radius: 4px;
+    appearance: none;
+}
+
+.sudoku-cell:focus{
+    outline: none;
+}
+
+/* Hiding spin buttons in cells */
+.sudoku-cell::-webkit-inner-spin-button,
+.sudoku-cell::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    color: white;
+    
+}
+
+/* user input cell */
+input.user-input {
+    color: white;
+    font-weight: bold; /*bolds the input value */
+    background-color: rgba(52, 50, 50, 0.858);
+   
+}
+
+input.solved-cell {
+    background-color: #b4ff72; /* green color for solved cells */
+    transition: background-color 0.2s ease;
+}
+
+input.backtrack-cell {
+    background-color: #ff8080; /* red color for backtracked cells */
+    transition: background-color 0.2s ease;
+}
+
+
+button {
+    margin: 20px;
+    margin-top:4px;
+    padding: 8px 40px;
+    font-family: Raleway, sans-serif, 'Lucida Sans';
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    border: 3px solid rgba(34, 241, 252, 0);
+    transition: 0.3s;
+    color: whitesmoke;
+    background-color: rgb(62, 60, 60);
+    position: relative;
+
+}
+ 
+button::after {
+    content: "";
+    position: absolute;
+    height: calc(100% + 10px);
+    width: calc(100% + 10px);
+    /* positioning the pseudo element (for gradient) in the buttons */
+    top: -5px;     
+    left: -5px;
+    border-radius: 50px;
+    background-image: linear-gradient(to bottom right, #008cff, #ffa6ed);
+    z-index: -1;
+}
+
+button:hover {
+    z-index: 0;
+    border: 3px solid rgba(34, 241, 252, 0);
+}
+
+/* effect in clicked state */
+button:focus {            
+    box-shadow: 0px 0px 0px 0px rgb(255, 255, 255);
+    animation: anim-shadow 0.3s forwards;
+}
+@keyframes anim-shadow {
+    100% {
+        box-shadow: 0px 0px 50px 20px rgba(214, 253, 23, 0);
+    }
+}
+
+#solve-button:focus {
+    z-index: 0;
+}
